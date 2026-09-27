@@ -1,0 +1,10 @@
+schema_version: 1
+target: candidate_170
+soc: candidate_dpu_170
+board: current_fpga
+runtime: linux_display_v1
+lab: local_lab
+verification_status: unverified
+capabilities:
+  - dpu.vpg_core
+

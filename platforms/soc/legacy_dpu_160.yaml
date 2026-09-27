@@ -1,0 +1,57 @@
+schema_version: 1
+soc: legacy_dpu_160
+
+address_spaces:
+  dpu:
+    base: 0x16000000
+    size: 0x00010000
+    access_tool: devmem32
+
+registers:
+  DPU.GCU.IRQ_MASK:
+    space: dpu
+    offset: 0x00A8
+    width: 32
+    access: rw
+    reset: 0x00000000
+    fields:
+      dou0_config_valid_mask: {lsb: 0, width: 1}
+
+  DPU.GCU.STATUS:
+    space: dpu
+    offset: 0x00B0
+    width: 32
+    access: ro
+    reset: 0x00000000
+
+  DPU.GCU.CONTROL:
+    space: dpu
+    offset: 0x00D0
+    width: 32
+    access: rw
+    reset: 0x00000000
+    fields:
+      state: {lsb: 0, width: 3}
+
+  DPU.DOU0.BS_CONTROL:
+    space: dpu
+    offset: 0x1ED0
+    width: 32
+    access: rw
+    reset: 0x00000000
+    fields:
+      timing_enable: {lsb: 0, width: 1}
+      video_mode: {lsb: 1, width: 1}
+      test_mode: {lsb: 12, width: 1}
+      crc_enable: {lsb: 18, width: 1}
+
+  DPU.DOU0.BS_ACTIVE_SIZE:
+    space: dpu
+    offset: 0x1EE0
+    width: 32
+    access: rw
+    reset: 0x01E00280
+    fields:
+      hactive: {lsb: 0, width: 13}
+      vactive: {lsb: 16, width: 13}
+

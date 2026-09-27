@@ -1,0 +1,19 @@
+schema_version: 1
+board: current_fpga
+
+instances:
+  dpu: [0]
+  dsi: [0]
+  panel: [0]
+
+display_modes:
+  1080x1920_current:
+    hactive: 1080
+    hfront_porch: 16
+    hsync: 8
+    hback_porch: 48
+    vactive: 1920
+    vfront_porch: 15
+    vsync: 6
+    vback_porch: 16
+

@@ -1,0 +1,17 @@
+schema_version: 1
+lab: local_lab
+
+dut:
+  transport: adb
+  serial_env: AUTO_TEST_ADB_SERIAL
+
+server:
+  transport: plink
+  host_env: HOST
+  port_env: PORT
+  key_env: KEY
+  repo_dir_env: REPO_DIR
+
+serial:
+  port_env: SERIAL_PORT
+  baud_env: SERIAL_BAUD
